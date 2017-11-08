@@ -1,0 +1,30 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div class="oj-flex">
+  <!-- <label>This is a Place for Asset Type Dropdown</label> -->
+</div>
+<div class="oj-flex">
+  <div class="oj-sm-2" style="background-color: #324B5C;padding: 10px">
+    <!-- ko foreach: catgoryList -->
+    <button onclick="myFunction(this)" style="background-color: #324B5C;color:white" class="w3-btn w3-block w3-left-align" data-bind="text:categoryName, attr:{name:id}"></button>
+
+
+    <div data-bind="attr:{id:id}" class="w3-container w3-hide">
+      <ul>
+        <!-- ko foreach: subcategoryList -->
+        <p style="color:aliceblue" data-bind="text:categoryName"></p>
+        <!-- /ko -->
+      </ul>
+    </div>
+
+
+    <!-- /ko -->
+  </div>
+  <div class="oj-sm-1">
+    <!-- HORIZONTAL SPACE -->
+  </div>
+  <div class="oj-sm-6">
+    RIGHT
+  </div>
+</div>
